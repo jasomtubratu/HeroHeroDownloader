@@ -1,4 +1,3 @@
-import datetime
 import subprocess
 import platform
 from colorama import Fore, Style
