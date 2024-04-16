@@ -41,15 +41,15 @@ def send_herohero_request(account, cookies):
                 title = text.split("\n", 1)[0].strip()
                 file_name = f"{title}.mp4"
                 try:
-                    print ("Stiahnutie videa: ", video_stream_url, "do súboru: ", os.path.join(videos_dir, file_name), datetime.datetime.now())
+                    print ("Downloading the video: ", video_stream_url, "do súboru: ", os.path.join(videos_dir, file_name), datetime.datetime.now())
                     if download_ffmpeg_output:
                         subprocess.run(["ffmpeg", "-i", video_stream_url, "-c", "copy", "-bsf:a", "aac_adtstoasc", os.path.join(videos_dir, file_name)], check=True)
                     else:
                         subprocess.run(["ffmpeg", "-i", video_stream_url, "-c", "copy", "-bsf:a", "aac_adtstoasc", os.path.join(videos_dir, file_name)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
 
-                    print(f"Video '{title}' bolo úspešne stiahnuté!", datetime.datetime.now())
+                    print(f"Video '{title}' has been successfully downloaded!", datetime.datetime.now())
                 except Exception as e:
-                    print(f"Chyba pri sťahovaní videa '{title}':", e, datetime.datetime.now())
+                    print(f"Error downloading video '{title}':", e, datetime.datetime.now())
 
             post_info = {
                 "attributes": attributes
