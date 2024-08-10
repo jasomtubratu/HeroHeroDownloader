@@ -1,6 +1,8 @@
 import subprocess
 import platform
 from colorama import Fore, Style
+import sys
+import time
 
 def construct_headers(access_token):
     headers = {
@@ -36,7 +38,10 @@ def print_blue(text):
 def check_ffmpeg_installation():
     try:
         subprocess.run(["ffmpeg", "-version"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
-        print("FFmpeg is installed. You can continue.")
-    except subprocess.CalledProcessError:
+    except FileNotFoundError:
         print("FFmpeg is not installed. Please install it.")
-        return
+        time.sleep(5)
+        return False
+    else:
+        print("FFmpeg is installed.")
+        return True

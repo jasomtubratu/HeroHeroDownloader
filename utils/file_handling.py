@@ -38,7 +38,3 @@ def fetch_herohero_user(account, access_token):
 
     return user_id
 
-def prompt_herohero_credentials():
-    herohero_account = input("Enter the user you want to download (you have to be subcribed): ")
-    access_token = input("Enter your accessToken to your HeroHero account: ")
-    return herohero_account, access_token
