@@ -5,7 +5,7 @@ import datetime
 from utils.utils import construct_headers
 
 
-def fetch_herohero_user(account, access_token):
+def get_user_data(account, access_token, download_all=False):
     url = f"https://herohero.co/services/user/v2/users?path={account}"
     headers = construct_headers(access_token)
     response = requests.get(url, headers=headers)
@@ -35,6 +35,10 @@ def fetch_herohero_user(account, access_token):
     image_file_name = f"user_image_{user_id}.jpeg"
     with open(os.path.join(attributes_dir, image_file_name), 'wb') as img_file:
         img_file.write(image_response.content)
-
-    return user_id
+    
+    if (download_all):
+        return user_id
+    else:
+        print("🚪 Exiting...")
+        return True
 

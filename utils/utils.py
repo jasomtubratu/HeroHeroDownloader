@@ -1,6 +1,5 @@
 import subprocess
 import platform
-from colorama import Fore, Style
 import sys
 import time
 
@@ -31,9 +30,6 @@ def clear_console():
 def change_cmd_title(title):
     if platform.system() == "Windows":
         subprocess.run(["title", title], shell=True)
-
-def print_blue(text):
-    print(Fore.BLUE + text + Style.RESET_ALL)
 
 def check_ffmpeg_installation():
     try:
