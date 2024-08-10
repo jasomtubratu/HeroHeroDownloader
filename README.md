@@ -1,10 +1,11 @@
+--------------------------------------------------
+# ⚠️ Update ⚠️
+Now working on rewriting this code. You can still use this but soon many more feature and better code <3 
+--------------------
 # HeroHeroDownloader
 The best content downloader from HeroHero.co! (Because it is the first and only)
 To make this program work, you have to be subcribed to the user! ⚠️
 
---------------------
-# ⚠️ Update ⚠️
-Now working on re write this repository. You can still use this but soon many more feature and better code <3 
 --------------------
 # ⚠️ Disclaimer ⚠️
 Information and code provided on this repository are for educational purposes only. The creator is no way responsible for any direct or indirect damage caused due to the misusage of the information. Everything you do, you are doing at your own risk and responsibility.
