@@ -35,4 +35,4 @@ Information and code provided on this repository are for educational purposes on
 ### Warning! The AccessToken will refresh every time you do something on the hero!
 - Open HeroHero.co and Developer Tools (F12)
 - Click on Application and open Cookies
-- There is your accessToken, use it without the "" at the beginning and at the end
+- There is your accessToken2, use it without the "" at the beginning and at the end
