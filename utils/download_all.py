@@ -5,12 +5,24 @@ import json
 import datetime
 import re
 from utils.utils import construct_headers
+import sys
+import re
+import os
 
 def create_directory(path):
     os.makedirs(path, exist_ok=True)
 
 def sanitize_filename(filename):
-    return re.sub(r'[\\/*?:"<>|]', "", filename)
+    invalid_chars = r'[\\/*?:"<>|]'
+    
+    sanitized_filename = re.sub(invalid_chars, "_", filename)
+    
+    max_length = 200
+    if len(sanitized_filename) > max_length:
+        sanitized_filename = sanitized_filename[:max_length]
+    
+    return sanitized_filename
+
 
 def download_video(video_url, file_name, download_dir):
     file_path = os.path.join(download_dir, file_name)
@@ -20,21 +32,28 @@ def download_video(video_url, file_name, download_dir):
             ["ffmpeg", "-i", video_url, "-c", "copy", "-bsf:a", "aac_adtstoasc", file_path],
             stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True
         )
-        print(f"✅ Video '{file_name}' has been successfully downloaded!", datetime.datetime.now())
+        print(f"✅ Video '{file_name}' has been successfully downloaded! |", datetime.datetime.now())
     except subprocess.CalledProcessError as e:
         print(f"❌ Error downloading video '{file_name}': {e}", datetime.datetime.now())
 
 def download_image(image_url, file_name, download_dir):
-    file_path = os.path.join(download_dir, file_name)
+    sanitized_file_name = sanitize_filename(file_name)
+    file_path = os.path.join(download_dir, sanitized_file_name)
+    
     try:
         print(f"⬇️ Downloading image: {image_url} | {datetime.datetime.now()}")
-        image_response = requests.get(image_url)
+        image_response = requests.get(image_url, stream=True)
         image_response.raise_for_status()
+        
         with open(file_path, 'wb') as img_file:
-            img_file.write(image_response.content)
-        print(f"✅ Image '{file_name}' has been successfully downloaded!", datetime.datetime.now())
+            for chunk in image_response.iter_content(chunk_size=8192):
+                img_file.write(chunk)
+                
+        print(f"✅ Image '{sanitized_file_name}' has been successfully downloaded! |", datetime.datetime.now())
     except requests.RequestException as e:
-        print(f"❌ Error downloading image '{file_name}': {e}", datetime.datetime.now())
+        print(f"❌ Error downloading image '{sanitized_file_name}': {e}", datetime.datetime.now())
+    except OSError as e:
+        print(f"❌ OS error: {e} | Filename: '{sanitized_file_name}'", datetime.datetime.now())
 
 def save_post_info(post, download_dir):
     post_info = {"attributes": post.get("attributes", {})}
@@ -90,3 +109,5 @@ def get_all_posts(account, cookies):
                 download_image(image_url, image_file_name, images_dir)
 
         save_post_info(post, account_dir)
+    print(f"✅ All posts have been successfully downloaded! | {datetime.datetime.now()}")
+    sys.exit(1)
