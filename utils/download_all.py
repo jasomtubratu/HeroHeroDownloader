@@ -5,8 +5,8 @@ import json
 import datetime
 from utils.utils import construct_headers
 
-def get_all_videos(account, cookies):
-    url = "https://herohero.co/services/post/v2/posts"
+def get_all_posts(account, cookies):
+    url = "https://svc-prod.herohero.co/api/v2/posts"
     pageIndex = 0
     all_posts = []  
 

@@ -14,7 +14,7 @@ def construct_headers(access_token):
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "sec-gpc": "1",
-        "cookie": f"accessToken=\"{access_token}\"",
+        "cookie": f"accessToken2=\"{access_token}\"",
         "Referer": "https://herohero.co/",
         "Referrer-Policy": "origin"
     }

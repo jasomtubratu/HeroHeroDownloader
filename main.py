@@ -1,6 +1,6 @@
 from colorama import Fore, Style
 from utils.utils import clear_console, change_cmd_title, check_ffmpeg_installation
-from utils.download_all import get_all_videos
+from utils.download_all import get_all_posts
 from utils.user_data import get_user_data
 
 def prompt_herohero_credentials():
@@ -48,7 +48,7 @@ def main():
 
     if choice == '1':
         herohero_account_id = get_user_data(account, access_token)
-        get_all_videos(herohero_account_id, access_token)
+        get_all_posts(herohero_account_id, access_token)
     elif choice == '2':
         print ("❌ Not implemented yet")
     elif choice == '3':
