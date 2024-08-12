@@ -1,7 +1,7 @@
 --------------------------------------------------
 # ⚠️ Update ⚠️
-Now working on rewriting this code. You can still use this but soon many more feature and better code <3 
---------------------
+herohero changed their API a bit, but I'm currently tweaking this code. So unfortunately this doesn't work :( You can however look in the dev branch
+--------------------------------------------------
 # HeroHeroDownloader
 The best content downloader from HeroHero.co! (Because it is the first and only)
 To make this program work, you have to be subcribed to the user! ⚠️
