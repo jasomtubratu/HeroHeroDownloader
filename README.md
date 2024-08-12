@@ -3,9 +3,6 @@ The best content downloader from HeroHero.co! (Because it is the first and only)
 To make this program work, you have to be subcribed to the user! ⚠️
 
 --------------------
-# ⚠️ Update ⚠️
-Now working on re write this repository. You can still use this but soon many more feature and better code <3 
---------------------
 # ⚠️ Disclaimer ⚠️
 Information and code provided on this repository are for educational purposes only. The creator is no way responsible for any direct or indirect damage caused due to the misusage of the information. Everything you do, you are doing at your own risk and responsibility.
 
@@ -30,7 +27,6 @@ Information and code provided on this repository are for educational purposes on
 `pip install -r requirements.txt`
 - Run main.py
 `py main.py`
-
 --------------------
 
 # How to get accessToken? 
@@ -38,3 +34,9 @@ Information and code provided on this repository are for educational purposes on
 - Open HeroHero.co and Developer Tools (F12)
 - Click on Application and open Cookies
 - There is your accessToken2, use it without the "" at the beginning and at the end
+  
+------------------
+# Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=jasomtubratu/HeroHeroDownloader&type=Date)](https://star-history.com/#jasomtubratu/HeroHeroDownloader&Date)
+
