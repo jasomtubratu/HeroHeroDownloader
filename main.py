@@ -47,12 +47,12 @@ def main():
     account, access_token = prompt_herohero_credentials()
 
     if choice == '1':
-        herohero_account_id = get_user_data(account, access_token)
+        herohero_account_id = get_user_data(account, access_token, True)
         get_all_posts(herohero_account_id, access_token)
     elif choice == '2':
         print ("❌ Not implemented yet")
     elif choice == '3':
-        get_user_data(account, access_token)
+        get_user_data(account, access_token, False)
     elif choice == '4':
         print ("🚪 Exiting...")
         exit()

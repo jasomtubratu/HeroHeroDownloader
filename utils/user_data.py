@@ -5,7 +5,7 @@ import datetime
 from utils.utils import construct_headers
 
 
-def get_user_data(account, access_token, download_all=False):
+def get_user_data(account, access_token, download_all):
     print(f"📦 Downloading user data for {account}...")
     url = f"https://svc-prod.herohero.co/api/v2/users?path={account}"
     headers = construct_headers(access_token)
@@ -52,7 +52,7 @@ def get_user_data(account, access_token, download_all=False):
         img_file.write(image_response.content)
 
     if download_all:
-        return user_id
+        return str(user_id)
     else:
         print("🚪 Exiting...")
         return True
