@@ -42,13 +42,10 @@ HeroHeroDownloader comes with a variety of capabilities:
     py main.py
     ```
 
-## 🔑 How to Obtain `accessToken2`
+## 🙋 FAQ
 
-### Important: The `accessToken2` will refresh each time you interact with HeroHero.co.
-
-1. Open [HeroHero.co](https://herohero.co) and press `F12` to access Developer Tools. 🛠️
-2. Navigate to the `Application` tab and open the `Cookies` section. 🍪
-3. Locate your `accessToken2` value. Copy it, excluding the quotation marks at the beginning and end.
+### How to get accessToken2?
+Check out our [Wiki](https://github.com/jasomtubratu/HeroHeroDownloader/wiki/How-to-get-accessToken2%3F)
 
 ## 🌟 Star History
 
