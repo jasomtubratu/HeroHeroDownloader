@@ -1,3 +1,4 @@
+import re
 import subprocess
 import platform
 import os
@@ -42,3 +43,17 @@ def check_ffmpeg_installation():
     else:
         print("✅ FFmpeg is installed.")
         return True
+
+def create_directory(path):
+    os.makedirs(path, exist_ok=True)
+
+def sanitize_filename(filename):
+    invalid_chars = r'[\\/*?:"<>|]'
+    
+    sanitized_filename = re.sub(invalid_chars, "_", filename)
+    
+    max_length = 200
+    if len(sanitized_filename) > max_length:
+        sanitized_filename = sanitized_filename[:max_length]
+    
+    return sanitized_filename

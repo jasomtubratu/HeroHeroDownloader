@@ -3,25 +3,10 @@ import subprocess
 import requests
 import json
 import datetime
-import re
-from utils.utils import construct_headers
+from utils.utils import construct_headers, create_directory, sanitize_filename
 import sys
 import re
 import os
-
-def create_directory(path):
-    os.makedirs(path, exist_ok=True)
-
-def sanitize_filename(filename):
-    invalid_chars = r'[\\/*?:"<>|]'
-    
-    sanitized_filename = re.sub(invalid_chars, "_", filename)
-    
-    max_length = 200
-    if len(sanitized_filename) > max_length:
-        sanitized_filename = sanitized_filename[:max_length]
-    
-    return sanitized_filename
 
 
 def download_video(video_url, file_name, download_dir):
