@@ -6,7 +6,7 @@
 
 The information and code provided in this repository are for educational purposes only. The creator of this repository is not responsible for any direct or indirect damage caused by the misuse of this information. Use at your own risk and responsibility.
 
-**Important:** Scraping data from HeroHero.co is against their [Terms of Service](https://herohero.co/terms). Proceed with caution. ⚖️
+**Important:** Scraping data from HeroHero.co is against their [Terms of Service](https://static.herohero.co/docs/legal/terms-en.pdf). Proceed with caution. ⚖️
 
 ## ✨ Features
 

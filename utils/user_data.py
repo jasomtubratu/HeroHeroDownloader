@@ -22,6 +22,13 @@ def save_image_to_file(image_url, directory, file_name):
 
 def get_user_data(account, access_token, download_all):
     print(f"📦 Downloading user data for {account}...")
+    
+    if len(account.split()) == 1:
+        if not account.startswith("https://herohero.co/"):
+            print("❌ Error: Invalid account format")
+            return False
+        account = account.replace("https://herohero.co/", "")
+
     url = f"https://svc-prod.herohero.co/api/v2/users?path={account}"
     headers = construct_headers(access_token)
     

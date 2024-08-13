@@ -4,8 +4,11 @@ from utils.utils import clear_console, change_cmd_title, check_ffmpeg_installati
 from utils.download_all import get_all_posts
 from utils.user_data import get_user_data
 
-def prompt_herohero_credentials():
-    herohero_account = input("❓ Enter the user you want to download (ex. https://herohero.co/{user}}): ")
+def prompt_herohero_credentials(account_required=True):
+    if account_required:
+        herohero_account = input("❓ Enter the user you want to download (ex. https://herohero.co/{user}): ")
+    else:
+        herohero_account = None
     access_token = input("❓ Enter your accessToken2 to your HeroHero account: ").strip('"')
     return herohero_account, access_token
 
@@ -56,16 +59,17 @@ def main():
             print("🚪 Exiting...")
             break
         
-        account, access_token = prompt_herohero_credentials()
-
-        if choice == '1':
-            herohero_account_id = get_user_data(account, access_token, True)
-            get_all_posts(herohero_account_id, access_token)
-        elif choice == '2':
+        if choice == '2':
+            account, access_token = prompt_herohero_credentials(account_required=False)
             post = input("❓ Enter the post URL you want to download (ex. https://herohero.co/{user}/post/{postID}): ")
             get_post(post, access_token)
-        elif choice == '3':
-            get_user_data(account, access_token, False)
+        else:
+            account, access_token = prompt_herohero_credentials()
+            if choice == '1':
+                herohero_account_id = get_user_data(account, access_token, True)
+                get_all_posts(herohero_account_id, access_token)
+            elif choice == '3':
+                get_user_data(account, access_token, False)
 
 if __name__ == "__main__":
     main()
