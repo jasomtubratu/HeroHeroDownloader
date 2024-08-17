@@ -9,7 +9,7 @@ This README is written in Czech, but the program itself is in English. Please ch
 
 Informace a kód uvedené v tomto repozitáři slouží pouze pro vzdělávací účely. Tvůrce tohoto repozitáře nenese odpovědnost za jakékoliv přímé či nepřímé škody způsobené zneužitím těchto informací. Používejte na vlastní riziko a odpovědnost.
 
-**Důležité:** Scraping dat z HeroHero.co je v rozporu s jejich [Podmínkami služby](https://static.herohero.co/docs/legal/terms-en.pdf). Postupujte opatrně. ⚖️
+**Důležité:** Scraping dat z HeroHero.co je v rozporu s jejich [Podmínkami služby](https://static.herohero.co/docs/legal/terms-cs.pdf). Postupujte opatrně. ⚖️
 
 ## ✨ Funkce
 
