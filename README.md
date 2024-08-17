@@ -1,71 +1,74 @@
+### Note for English Users
+This README is written in Czech, but the program itself is in English. Please check out English [README.MD](https://github.com/jasomtubratu/HeroHeroDownloader/blob/main/README-ENGLISH.md)
+---
 # 🚀 HeroHeroDownloader
 
-**HeroHeroDownloader** is the best (and only!) working content downloader for [HeroHero.co](https://herohero.co). Please note that you must be subscribed to the user's content to use this program. 🔑
+**HeroHeroDownloader** je nejlepší (a jediný!) funkční downloader obsahu pro [HeroHero.co](https://herohero.co). Upozorňujeme, že pro použití tohoto programu musíte být předplatitelem obsahu uživatele. 🔑
 
 ## ⚠️ Disclaimer ⚠️
 
-The information and code provided in this repository are for educational purposes only. The creator of this repository is not responsible for any direct or indirect damage caused by the misuse of this information. Use at your own risk and responsibility.
+Informace a kód uvedené v tomto repozitáři slouží pouze pro vzdělávací účely. Tvůrce tohoto repozitáře nenese odpovědnost za jakékoliv přímé či nepřímé škody způsobené zneužitím těchto informací. Používejte na vlastní riziko a odpovědnost.
 
-**Important:** Scraping data from HeroHero.co is against their [Terms of Service](https://static.herohero.co/docs/legal/terms-en.pdf). Proceed with caution. ⚖️
+**Důležité:** Scraping dat z HeroHero.co je v rozporu s jejich [Podmínkami služby](https://static.herohero.co/docs/legal/terms-en.pdf). Postupujte opatrně. ⚖️
 
-## ✨ Features
+## ✨ Funkce
 
-HeroHeroDownloader comes with a variety of capabilities:
+HeroHeroDownloader nabízí různé schopnosti:
 
-- 📥 Download user posts
-- 🖼️ Download profile pictures
-- 📝 Download profile attributes
-- 🗂️ Download all user data
+- 📥 Stahování příspěvků uživatelů
+- 🖼️ Stahování profilových obrázků
+- 📝 Stahování atributů profilu
+- 🗂️ Stahování všech uživatelských dat
 
-## 💻 Installation and Usage
+## 💻 Instalace a použití
 
-### 🔄 Automatic Installation (Windows Only)
+### 🔄 Automatická instalace (pouze Windows)
 
-1. Download the latest [release](https://github.com/jasomtubratu/HeroHeroDownloader/releases).
-2. Run `setup.bat`. (For automatic `ffmpeg` installation, run as Administrator. 🛡️)
-3. Execute `main.py`:
+1. Stáhněte nejnovější [release](https://github.com/jasomtubratu/HeroHeroDownloader/releases).
+2. Spusťte `setup.bat`. (Pro automatickou instalaci `ffmpeg` spusťte jako Administrátor. 🛡️)
+3. Spusťte `main.py`:
     ```sh
     py main.py
     ```
 
-### 🛠️ Manual Installation
+### 🛠️ Manuální instalace
 
-1. Install Python from [python.org](https://www.python.org/). 🐍
-2. Install `ffmpeg` from [ffmpeg.org](https://ffmpeg.org/).
-3. Download the latest [release](https://github.com/jasomtubratu/HeroHeroDownloader/releases).
-4. Install the necessary Python dependencies:
+1. Nainstalujte Python z [python.org](https://www.python.org/). 🐍
+2. Nainstalujte `ffmpeg` z [ffmpeg.org](https://ffmpeg.org/).
+3. Stáhněte nejnovější [release](https://github.com/jasomtubratu/HeroHeroDownloader/releases).
+4. Nainstalujte potřebné Python knihovny:
     ```sh
     pip install -r requirements.txt
     ```
-5. Run the main script:
+5. Spusťte hlavní skript:
     ```sh
     py main.py
     ```
 
 ## 🙋 FAQ
 
-### How to get accessToken2?
-Check out our [Wiki](https://github.com/jasomtubratu/HeroHeroDownloader/wiki/How-to-get-accessToken2%3F)
+### Jak získat accessToken2?
+Podívejte se na naši [Wiki](https://github.com/jasomtubratu/HeroHeroDownloader/wiki/How-to-get-accessToken2%3F)
 
-## 🌟 Star History
+## 🌟 Historie hvězdiček
 
 [![Star History Chart](https://api.star-history.com/svg?repos=jasomtubratu/HeroHeroDownloader&type=Date)](https://star-history.com/#jasomtubratu/HeroHeroDownloader&Date)
 
-## 🤝 Contributing
+## 🤝 Přispívání
 
-We welcome contributions! If you'd like to contribute, please follow these steps:
+Přivítáme jakékoliv příspěvky! Pokud byste chtěli přispět, postupujte prosím podle těchto kroků:
 
-1. Fork the repository. 🍴
-2. Create a new branch for your feature or bugfix:
+1. Forkněte repozitář. 🍴
+2. Vytvořte novou větev pro vaši funkci nebo opravu chyby:
     ```sh
     git checkout -b your-feature-branch
     ```
-3. Make your changes and commit them:
+3. Proveďte změny a uložte je:
     ```sh
-    git commit -m "Add a helpful feature"
+    git commit -m "Přidat užitečnou funkci"
     ```
-4. Push to your branch:
+4. Nahrajte změny do vaší větve:
     ```sh
     git push origin your-feature-branch
     ```
-5. Open a Pull Request. We’ll review your changes as soon as possible! 🚀
+5. Otevřete Pull Request. Vaše změny zhodnotíme co nejdříve! 🚀
