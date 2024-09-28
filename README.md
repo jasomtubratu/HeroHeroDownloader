@@ -48,7 +48,9 @@ HeroHeroDownloader nabízí různé schopnosti:
 ## 🙋 FAQ
 
 ### Jak získat accessToken2?
-Podívejte se na naši [Wiki](https://github.com/jasomtubratu/HeroHeroDownloader/wiki/How-to-get-accessToken2%3F)
+Otevřete Developer Tools (F12 nebo CTRL+SHIFT+I)
+![image](https://github.com/user-attachments/assets/7dd803b8-adac-41ad-a66d-ecd3e294cd2a)
+
 
 ## 🌟 Historie hvězdiček
 
