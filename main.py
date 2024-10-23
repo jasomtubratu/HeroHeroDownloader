@@ -15,7 +15,7 @@ def prompt_herohero_credentials(account_required=True):
 def what_you_want_to_do():
     options = {
         '1': "Download whole user's profile",
-        '2': "Download a specific post (video/image/text) | DOES NOT WORK!!! DO NOT USE!!",
+        '2': "Download a specific post (video/image/text)",
         '3': "Download user metadata",
         '4': "Exit"
     }
