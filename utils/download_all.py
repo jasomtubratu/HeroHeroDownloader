@@ -81,9 +81,12 @@ def get_all_posts(account, cookies):
 
         video_asset = next((asset for asset in attributes.get("assets", []) if asset.get("gjirafa")), None)
         if video_asset:
-            video_stream_url = video_asset["gjirafa"]["videoStreamUrl"]
-            file_name = f"{title}-{datetime.datetime.now().timestamp()}.mp4"
-            download_video(video_stream_url, file_name, videos_dir)
+            video_stream_url = video_asset["gjirafa"].get("videoStreamUrl")
+            if video_stream_url:
+                file_name = f"{title}-{datetime.datetime.now().timestamp()}.mp4"
+                download_video(video_stream_url, file_name, videos_dir)
+            else:
+                print(f"❌ No video stream URL found for video asset in post '{post['id']}'")
 
         for asset in attributes.get("assets", []):
             image = asset.get("image")
